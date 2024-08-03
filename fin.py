@@ -8,14 +8,17 @@ SYSTEM_PROMPT="You are a highly knowledgeable and experienced expert in the fina
 
 USER_PROMPT_DEFAULT="Can you explain how central banks printing more money (quantitative easing) affects the stock market and how investors might react to it?"
 
-tokenizer = AutoTokenizer.from_pretrained(model_id)
+
+access_token="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"
 
 model = AutoModelForCausalLM.from_pretrained(
     model_id,
     torch_dtype=torch.float16,
     device_map="auto",
     attn_implementation="flash_attention_2",
+    token=access_token,
 )
+tokenizer = AutoTokenizer.from_pretrained(model_id) 
 
 st.title("Your Financial Assistant")
 
