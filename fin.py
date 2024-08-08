@@ -9,7 +9,6 @@ SYSTEM_PROMPT="You are a highly knowledgeable and experienced expert in the fina
 USER_PROMPT_DEFAULT="Can you explain how central banks printing more money (quantitative easing) affects the stock market and how investors might react to it?"
 
 
-access_token="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"
 
 model = AutoModelForCausalLM.from_pretrained(
     model_id,
